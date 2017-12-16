@@ -1,16 +1,16 @@
 import string
 
 def decrypt():
-  initial = input('Donnes le message à décrypter : ')
-  cle = input("Donnes la clé : ")
+  initial = input('Give the message (no space or special characters) : ')
+  cle = input("Give the key : ")
   quotients = cle.split("-")
   initial = initial.lower()
   numeros = []
   for character in initial:
       numeros.append(ord(character) - 97)
   
-  a = int(input('Donnes le nombre a utilisé : '))
-  b = int(input('Donnes le nombre b utilisé : '))
+  a = int(input('Give the value of a : '))
+  b = int(input('Give the value of b : '))
   
   output = ""
   alphabet = dict(zip(range(0, 26), string.ascii_lowercase))
@@ -19,4 +19,4 @@ def decrypt():
     image = str(alphabet[int(((int(quotients[i]) * 26 + numeros[i] - b) / a))])
     output += image
     
-  print(output)
+  print("Decrypted message : " + output)
