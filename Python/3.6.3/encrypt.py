@@ -1,14 +1,14 @@
 import string
 
 def encrypt():
-  initial = input('Donne le message à crypter (toutes les lettres doivent être collées et aucun caractère spécial) : ')
+  initial = input('Give the message (no space or special characters) : ')
   initial = initial.lower()
   numeros = []
   for character in initial:
       numeros.append(ord(character) - 97)
 
-  a = int(input('Donnes le nombre a  (multiplication entier supérieur à 0) : '))
-  b = int(input('Donnes le nombre b (addition) : '))
+  a = int(input('Give a (integer greater than or equal to 0) : '))
+  b = int(input('Give b (integer greater than or equal to 0) : '))
 
   output = ""
   cle = ""
@@ -26,5 +26,5 @@ def encrypt():
 
     cle += divtem
 
-  print("Message crypté : " + output)
-  print("\n" + "Clé : " + cle)
+  print("Encrypted message : " + output)
+  print("\n" + "Key : " + cle)
