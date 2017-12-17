@@ -1,19 +1,19 @@
 # Affine Cipher
 
-The affine cipher is a type of monoalphabetic substitution cipher, wherein each letter in an alphabet is mapped to its numeric equivalent (0 to 25), encrypted using a simple mathematical function, and converted back to a letter. The formula used means that each letter encrypts to one other letter, and back again, meaning the cipher is essentially a standard substitution cipher with a rule governing which letter goes to which. As such, it has the weaknesses of all substitution ciphers. Each letter is enciphered with the function (ax + b) mod 26, where b is the magnitude of the shift.
+## History and usage
 
-> Wikipedia
+The affine cipher is a type of monoalphabetic substitution cipher. It ecnrypts a text using an affine function (ax + b).
+
+## Deatailed Explanations : How it works?
+
+1. Firstly, each character of the initial text (message to encrypt) is converted in a number from 0 to 25, corresponding to its position in the Latin alphabet which contains 26 letters
+2. Then, each number is transformed by an affine function (ax + b) where x is the number and a and b are the keys ne
+
+## Weaknesses
+
+## Examples
 
 [https://en.wikipedia.org/wiki/Affine_cipher](https://en.wikipedia.org/wiki/Affine_cipher)
-
-Examples :
-
-Message : Attack
-Value of a : 37
-Value of b : 63
-
-Encrypted message : lmmlhr
-Key : 2-29-29-2-5-16
 
 
 
