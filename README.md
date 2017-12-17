@@ -17,7 +17,9 @@ The affine cipher is a type of monoalphabetic substitution cipher. It ecnrypts a
 
 - We can also use frequency analysis if the message is long to decrypt the message as the most common letters in english are :
 
-![frequency analysis graph](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/English_letter_frequency_%28alphabetic%29.svg/340px-English_letter_frequency_%28alphabetic%29.svg.png )
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/English_letter_frequency_%28alphabetic%29.svg/340px-English_letter_frequency_%28alphabetic%29.svg.png">
+</p>
 
 - Other possibilities include guessing the keys a and b
 
