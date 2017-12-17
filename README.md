@@ -4,7 +4,7 @@
 
 The *affine cipher* is a type of monoalphabetic **substitution cipher**. It ecnrypts a text using an *affine function* (ax + b).
 
-## Deatailed Explanations : How it works?
+## Detailed Explanations : How it works?
 
 1. Firstly, each character of the initial text (message to encrypt) is converted in a number from 0 to 25, corresponding to its position in the Latin alphabet which contains 26 letters --> (a = 0, b = 1 ... z = 25 )
 2. Then, each number is transformed by an affine function (ax + b) where x is the number and a and b are the keys required to decrypt the final message. The values of modulo 26 of each image are stored in a new list. (**Modulo means remainder**)
@@ -60,6 +60,6 @@ Using the **modulo 26 method**, we obtain:
 
 The final message is **6 11 11 6 12 10** and using the tables again, we convert them in the encrypted message :
 
-**GLLGMK**
+> **GLLGMK**
 
 **ATTACK** is encrypted with the function **3x + 6** and becomes **GLLGMK**.
