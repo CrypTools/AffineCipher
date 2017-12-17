@@ -35,7 +35,7 @@ Steps 1 and 3 can be done with these tables :
 
 - Knowing a can be helpful to eliminate a lot of solutions
 
-## Examples
+## Example
 
 - Message to encrypt : **ATTACK**
 - Function used : f(x) = **3x + 6**
