@@ -6,18 +6,25 @@ The *affine cipher* is a type of monoalphabetic **substitution cipher**. It ecnr
 
 ## Detailed Explanations : How it works?
 
-1. Firstly, each character of the initial text (message to encrypt) is converted in a number from 0 to 25, corresponding to its position in the Latin alphabet which contains 26 letters --> (a = 0, b = 1 ... z = 25 )
-2. Then, each number is transformed by an affine function (ax + b) where x is the number and a and b are the keys required to decrypt the final message. The values of modulo 26 of each image are stored in a new list. (**Modulo means remainder**)
-3. Therefore, we convert each number of the list in a letter from the Latin Alphabet according to its position.
-4. We finally create the final message by putting all the letters side by side.
+1. Firstly, each character of the initial text (message to encrypt) is converted in a number from 0 to 25, corresponding to its position in the Latin alphabet which contains 26 letters --> (a = 0, b = 1 ... z = 25 ).
 
-Steps 1 and 3 can be done with these tables : 
+2. Then, each number obtained is transformed by an affine function (ax + b). "x" is representing the number while "a" and "b" are defined during the encryption. "a" and "b" are the keys required to decrypt the final message. 
 
-| A | B | C | D | E | F | G | H | I | J | K  | L  | M  |
+3. If we take all the images and put them in a list, we obtain n numbers corresponding to n charcaters of the initial text. The next step consists in finding the values of mudulo 26 of each number. (**Modulo means remainder**)
+
+> Example : Modulo 4 of 19 is **3** because 15 = 4 * 4 + **3** In the other hand, modulo 26 of 26 is **0** because 26 = 26 * 1 + **0**
+
+4. Therefore, we cobtain a new list with n element, each between 0 and 25 both included. All these numbers are converted in letters of the Latin Alphabet using the tables below.
+
+5. We finally create the final message by putting all the letters side by side.
+
+Steps 1 and 4 can be done with these tables : 
+
+| **A** | B | **C** | D | E | F | G | H | I | J | **K**  | L  | M  |
 |---|---|---|---|---|---|---|---|---|---|----|----|----|
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 
-| N  | O  | P  | Q  | R  | S  | T  | U  | V  | W  | X  | Y  | Z  |
+| N  | O  | P  | Q  | R  | S  | **T**  | U  | V  | W  | X  | Y  | Z  |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|
 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 
@@ -31,9 +38,9 @@ Steps 1 and 3 can be done with these tables :
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/English_letter_frequency_%28alphabetic%29.svg/340px-English_letter_frequency_%28alphabetic%29.svg.png">
 </p>
 
-- Other possibilities include guessing the keys a and b
+- Other possibilities include guessing the keys a and b.
 
-- Knowing a can be helpful to eliminate a lot of solutions
+- Knowing a can be helpful to eliminate a lot of solutions.
 
 ## Example
 
