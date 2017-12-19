@@ -5,18 +5,18 @@ def encrypt(initial, a, b):
 => ('hbffljb', '29-12-42-42-3-16-12')
   """
   initial = initial.lower()
-  numeros = []
+  list = []
   for character in initial:
-      numeros.append(ord(character) - 97)
+      list.append(ord(character) - 97)
   output = ""
   key = ""
 
   alphabet = dict(zip(range(0, 26), string.ascii_lowercase))
-  for i in range(len(numeros)):
-    image = str(alphabet[int(numeros[i] * a + b) % 26])
+  for i in range(len(list)):
+    image = str(alphabet[int(list[i] * a + b) % 26])
     output += image
     
-    div = str(int(numeros[i] * a + b) // 26)
+    div = str(int(list[i] * a + b) // 26)
     if i == 0:
       divtem = div
     else:
