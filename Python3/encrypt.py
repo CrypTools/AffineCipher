@@ -26,5 +26,4 @@ def encrypt(initial, a, b):
 
     key += divtem
   
-  return output
-  return key
+  return output, key
