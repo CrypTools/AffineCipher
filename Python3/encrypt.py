@@ -3,9 +3,13 @@
 import string
 
 def encrypt(initial, a, b):
+  
   """
-  bobuobu
+  Use: encrypt("message", 45, 65)
+=> Encrypted message : hlrrnxl
+=> Key : 23-9-33-33-2-12-9
   """
+  
   initial = initial.lower()
   numeros = []
   for character in initial:
@@ -26,5 +30,5 @@ def encrypt(initial, a, b):
 
     cle += divtem
 
-  print("Message crypté : " + output)
-  print("\n" + "Clé : " + cle)
+  print("Encrypted message : " + output)
+  print("\n" + "Key : " + cle)
