@@ -1,11 +1,9 @@
-"""
-Use : encrypt("message", 56, 89)
-=> ('hbffljb', '29-12-42-42-3-16-12')
-"""
-
 import string
 
 def encrypt(initial, a, b):
+  """ Use : encrypt("message", 56, 89)
+=> ('hbffljb', '29-12-42-42-3-16-12')
+  """
   initial = initial.lower()
   numeros = []
   for character in initial:
