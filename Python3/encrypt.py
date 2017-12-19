@@ -1,15 +1,15 @@
+
+
 import string
 
-def encrypt():
-  initial = input('Give the message (no space or special characters) : ')
+def encrypt(initial, a, b):
+  """
+  bobuobu
+  """
   initial = initial.lower()
   numeros = []
   for character in initial:
       numeros.append(ord(character) - 97)
-
-  a = int(input('Give a (integer greater than or equal to 0) : '))
-  b = int(input('Give b (integer greater than or equal to 0) : '))
-
   output = ""
   cle = ""
 
@@ -26,5 +26,5 @@ def encrypt():
 
     cle += divtem
 
-  print("Encrypted message : " + output)
-  print("\n" + "Key : " + cle)
+  print("Message crypté : " + output)
+  print("\n" + "Clé : " + cle)
