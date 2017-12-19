@@ -1,13 +1,12 @@
-import string
-
-def decrypt(initial, cle, a, b):
-  
-  """  Use: decrypt("message", 45, 65)
-=> Encrypted message : hlrrnxl
-=> Key : 23-9-33-33-2-12-9
+"""
+Use : decrypt("hbffljb", "29-12-42-42-3-16-12", 56, 89)
+=> 'message'
 """
 
-  quotients = cle.split("-")
+import string
+
+def decrypt(initial, key, a, b):
+  quotients = key.split("-")
   initial = initial.lower()
   numeros = []
   for character in initial:
@@ -19,4 +18,4 @@ def decrypt(initial, cle, a, b):
     image = str(alphabet[int(((int(quotients[i]) * 26 + numeros[i] - b) / a))])
     output += image
     
-  print(output)
+  return output
