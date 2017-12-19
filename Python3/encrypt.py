@@ -1,21 +1,17 @@
-
+"""
+Use : encrypt("message", 56, 89)
+=> 'hbffljb'
+"""
 
 import string
 
 def encrypt(initial, a, b):
-  
-  """
-  Use: encrypt("message", 45, 65)
-=> Encrypted message : hlrrnxl
-=> Key : 23-9-33-33-2-12-9
-  """
-  
   initial = initial.lower()
   numeros = []
   for character in initial:
       numeros.append(ord(character) - 97)
   output = ""
-  cle = ""
+  key = ""
 
   alphabet = dict(zip(range(0, 26), string.ascii_lowercase))
   for i in range(len(numeros)):
@@ -28,7 +24,7 @@ def encrypt(initial, a, b):
     else:
       divtem = "-" + div
 
-    cle += divtem
-
-  print("Encrypted message : " + output)
-  print("\n" + "Key : " + cle)
+    key += divtem
+  
+  return output
+  return key
