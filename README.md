@@ -1,6 +1,6 @@
 # Affine Cipher
 
-## History and usage
+## Usage
 
 The *affine cipher* is a type of monoalphabetic **substitution cipher**. It ecnrypts a text using an *affine function* (ax + b).
 
