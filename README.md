@@ -20,17 +20,17 @@ The *affine cipher* is a type of monoalphabetic **substitution cipher**. It ecnr
 
 Steps 1 and 4 can be done with these tables : 
 
-| **A** | B | **C** | D | E | F | G | H | I | J | **K**  | L  | M  |
+| A | B | C | D | E | F | G | H | I | J | K  | L  | M  |
 |---|---|---|---|---|---|---|---|---|---|----|----|----|
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 
-| N  | O  | P  | Q  | R  | S  | **T**  | U  | V  | W  | X  | Y  | Z  |
+| N  | O  | P  | Q  | R  | S  | T  | U  | V  | W  | X  | Y  | Z  |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|
 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 
 ## Weaknesses
 
-- As each letter is encrypted using the same function, trying many possibilities for a or b can be useful to decrypt the message This is called the **bruteforce method**.
+- As each letter is encrypted using the same function, trying many possibilities for a or b can be useful to decrypt the message. This is called the **bruteforce method**.
 
 - We can also use **frequency analysis** if the message is long to decrypt the message as the most common letters in english are :
 
