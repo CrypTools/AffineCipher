@@ -44,6 +44,8 @@ Steps 1 and 4 can be done with these tables :
 
 ## Example
 
+### Encrypting
+
 - Message to encrypt : **ATTACK**
 - Function used : f(x) = **3x + 6**
 - That means that **a = 3 and b = 6**
@@ -70,3 +72,33 @@ The final message is **6 11 11 6 12 10** and using the tables again, we convert 
 > **GLLGMK**
 
 **ATTACK** is encrypted with the function **3x + 6** and becomes **GLLGMK**.
+
+### Decrypting
+
+- Message to encrypt : **ATTACK**
+- Function used : f(x) = **3x + 6**
+- That means that **a = 3 and b = 6**
+
+Using the above tables, ATTACK can be written as : **0 19 19 0 2 10**
+Images of each number :
+
+- f(0) = 6
+- f(19) = 63 
+- f(2) = 12
+- f(10) = 36
+
+The new list is : **6 63 63 6 12 36**
+
+Using the **modulo 26 method**, we obtain:
+
+- Mod(6,26) = 6
+- Mod(63,26) = 11
+- Mod(12,26) = 12
+- Mod(36,26) = 10
+
+The final message is **6 11 11 6 12 10** and using the tables again, we convert them in the encrypted message :
+
+> **GLLGMK**
+
+**ATTACK** is encrypted with the function **3x + 6** and becomes **GLLGMK**.
+
