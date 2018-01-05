@@ -2,13 +2,13 @@
 
 ## Usage
 
-The *affine cipher* is a type of monoalphabetic **substitution cipher**. It ecnrypts a text using an *affine function* (ax + b).
+The *affine cipher* is a type of monoalphabetic **substitution cipher**. It ecnrypts a text using an *affine function* (f(x) = ax + b).
 
 ## Detailed Explanations : How it works?
 
 1. Firstly, each character of the initial text (message to encrypt) is converted in a number from 0 to 25, corresponding to its position in the Latin alphabet which contains 26 letters --> (a = 0, b = 1 ... z = 25 ).
 
-2. Then, each number obtained is transformed by an affine function (ax + b). "x" is representing the number while "a" and "b" are defined during the encryption. "a" and "b" are the keys required to decrypt the final message. 
+2. Then, each number obtained is transformed by an affine function (f(x) = ax + b). "x" is representing the number while "a" and "b" are defined during the encryption. "a" and "b" are the keys required to decrypt the final message. 
 
 3. If we take all the images and put them in a list, we obtain n numbers corresponding to n charcaters of the initial text. The next step consists in finding the values of mudulo 26 of each number. (**Modulo means remainder**)
 
@@ -100,5 +100,5 @@ The final message is **6 11 11 6 12 10** and using the tables again, we convert 
 
 > **GLLGMK**
 
-**ATTACK** is encrypted with the function **3x + 6** and becomes **GLLGMK**.
+**ATTACK** is encrypted with the function **f(x) = 3x + 6** and becomes **GLLGMK**.
 
