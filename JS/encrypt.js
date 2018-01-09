@@ -5,18 +5,14 @@ String.prototype.encrypt = function(a, b) {
 		array.push(alphabet.indexOf(i.toLowerCase()))
 	}
 	let output = "";
-	let cle;
+	let cle = [];
 	let divtem = "";
 	for (let i of array) {
-		const image = alphabet[i * a + b % 26]
+		const image = alphabet[(i * a + b) % 26]
 		output += image
-		const div = Math.floor(i * a + b / 26).toString()
-		if (i == 0) {
-			divtem = div
-		} else {
-			divem = "-" + div
-		}
-		cle += divtem
+		const div = Math.floor((i * a + b) / 26).toString()
+		cle.push(div)
 	}
-	return [output, cle]
+	return [output, cle.join("-")]
 }
+module.exports = (text, a, b) => text.encrypt(a, b)
