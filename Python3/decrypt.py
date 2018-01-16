@@ -6,14 +6,14 @@ def decrypt(initial, key, a, b):
   """
   quotient = key.split("-")
   initial = initial.lower()
-  list = []
+  mylist = []
   for character in initial:
-      list.append(ord(character) - 97)
+      mylist.append(ord(character) - 97)
   output = ""
   alphabet = dict(zip(range(0, 26), string.ascii_lowercase))
 
-  for i in range(len(list)):
-    image = str(alphabet[int(((int(quotient[i]) * 26 + list[i] - b) / a))])
+  for i in range(len(mylist)):
+    image = str(alphabet[int(((int(quotient[i]) * 26 + mylist[i] - b) / a))])
     output += image
     
   return output
