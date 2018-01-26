@@ -2,7 +2,7 @@
 
 ## Usage
 
-The *affine cipher* is a type of monoalphabetic **substitution cipher**. It ecnrypts a text using an *affine function* (f(x) = ax + b).
+The *affine cipher* is a type of monoalphabetic **substitution cipher**. It encrypts a text using an *affine function* (f(x) = ax + b).
 
 ## Detailed Explanations : How it works?
 
