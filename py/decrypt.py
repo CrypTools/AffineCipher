@@ -1,17 +1,35 @@
-def decrypt(initial, key, a, b):
-  """ Use : decrypt("hbffljb", "29-12-42-42-3-16-12", 56, 89)
-=> 'message'
-  """
-  quotient = key.split("-")
-  initial = initial.lower()
-  mylist = []
-  for character in initial:
-      mylist.append(ord(character) - 97)
-  output = ""
-  alphabet = dict(zip(range(0, 26), string.ascii_lowercase))
+# ==============================================================================
+#
+#    Use:
+#    decrypt("Yxiij Djkio!", 9, 13)
+#    => "Hello World!"
+#
+# ==============================================================================
 
-  for i in range(len(mylist)):
-    image = str(alphabet[int(((int(quotient[i]) * 26 + mylist[i] - b) / a))])
-    output += image
-    
-  return output
+def decrypt(s, a, b):
+
+	output = ''
+
+	a_inv = 0
+	while a * a_inv % 26 != 1:
+		a_inv += 1
+
+	for c in s:
+		
+		if ord(c) >= 0x41 and ord(c) <= 0x5a:
+			i = ord(c) - 0x41
+			i = ( a_inv * (i-b) ) % 26
+			output += chr(i + 0x41)
+
+		elif ord(c) >= 0x61 and ord(c) <= 0x7a:
+			i = ord(c) - 0x61
+			i = ( a_inv * (i-b) ) % 26
+			output += chr(i + 0x61)
+
+		else:
+			output += c
+
+	return output
+
+if __name__ == "__main__":
+	print( decrypt("Yxiij Djkio!", 9, 13) )
