@@ -75,30 +75,31 @@ The final message is **6 11 11 6 12 10** and using the tables again, we convert 
 
 ### Decrypting
 
-- Message to encrypt : **ATTACK**
-- Function used : f(x) = **3x + 6**
+- Message to decrypt : **GLLGMK**
 - That means that **a = 3 and b = 6**
+- Hence a<sup>-1</sup> = [modular multiplicative inverse](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse) of a modulo m (m = 26), a<sup>-1</sup> = 9
+- Function used : f(x) = **9x - 54**
 
-Using the above tables, ATTACK can be written as : **0 19 19 0 2 10**
+Using the above tables, GLLGMK can be written as : **6 11 11 6 12 10**
 Images of each number :
 
-- f(0) = 6
-- f(19) = 63 
-- f(2) = 12
-- f(10) = 36
+- f(6) = 54 - 54 = 0
+- f(11) = 99 - 54 = 45
+- f(12) = 108 - 54 = 54
+- f(10) = 90 - 54 = 36
 
-The new list is : **6 63 63 6 12 36**
+The new list is : **0 45 45 0 54 36**
 
 Using the **modulo 26 method**, we obtain:
 
-- Mod(6,26) = 6
-- Mod(63,26) = 11
-- Mod(12,26) = 12
+- Mod(0,26) = 0
+- Mod(45,26) = 19
+- Mod(54,26) = 2
 - Mod(36,26) = 10
 
-The final message is **6 11 11 6 12 10** and using the tables again, we convert them in the encrypted message :
+The final message is **0 19 19 0 2 10** and using the tables again, we convert them in the plain text :
 
-> **GLLGMK**
+> **ATTACK**
 
-**ATTACK** is encrypted with the function **f(x) = 3x + 6** and becomes **GLLGMK**.
+**GLLGMK** is decrypted with the function **f(x) = 3x + 6** and becomes **ATTACK**.
 
