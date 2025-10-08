@@ -103,3 +103,7 @@ The final message is **0 19 19 0 2 10** and using the tables again, we convert t
 
 **GLLGMK** is decrypted with the function **f(x) = 3x + 6** and becomes **ATTACK**.
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
